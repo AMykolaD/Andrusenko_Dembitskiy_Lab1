@@ -13,6 +13,9 @@ public class IntelligentMeteorologist {
     //length-1: загальні
     //length: повторки
     public String generateResponse(String input) throws IOException {
+        if(input==null|| input.equals("")){
+            return "...";
+        }
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader("src/main/resources/responses.txt"));
